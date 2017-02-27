@@ -31,7 +31,7 @@ myApp.factory("kartService", function(bookService) {
 	var orderList = [];
 	var bookList_length = bookService.getBooks().length;
 	function width(value) {
-		newValue = 600 + value*100;
+		newValue = 500 + value*100;
 		return newValue+"px";
 	};
 	return {
