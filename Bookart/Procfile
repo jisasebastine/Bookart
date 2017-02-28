@@ -1,1 +1,1 @@
-web: sh WebContent/bookart/index.html
+web: sh target/bin/webapp
