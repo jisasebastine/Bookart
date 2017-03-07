@@ -52,9 +52,10 @@ myApp.factory("kartService", function(bookService) {
 		},
 		update: function($scope) {	
 			var available_books = bookList_length-orderList.length;
-			d3.select(".chart").select("#available").style("width",width(available_books)).text("Available = "+available_books);
-			d3.select(".chart").select("#inKart").style("width",width(kart.length)).text("Kart = "+kart.length);
-			d3.select(".chart").select("#sold").style("width",width(orderList.length)).text("Sold = "+orderList.length);
+			var av = d3.select(".chart").select("#available");
+			av.transition().duration(3000).style("width",width(available_books)).text("Available = "+available_books);
+			d3.select(".chart").select("#inKart").transition().duration(3000).style("width",width(kart.length)).text("Kart = "+kart.length);
+			d3.select(".chart").select("#sold").transition().duration(3000).style("width",width(orderList.length)).text("Sold = "+orderList.length);
 			console.log("available: "+available_books);
 		}
 	}
