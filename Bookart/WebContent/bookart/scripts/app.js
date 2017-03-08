@@ -31,8 +31,13 @@ myApp.factory("kartService", function(bookService) {
 	var orderList = [];
 	var bookList_length = bookService.getBooks().length;
 	function width(value) {
-		newValue = 600 + value*100;
-		return newValue+"px";
+		newValue = value*100;
+		return newValue+"%";
+	};
+
+	function myFunction($scope) {
+		 var popup = document.getElementById("myPopup");
+		 popup.classList.toggle("show");
 	};
 	return {
 		getorderList : function() {
@@ -54,9 +59,9 @@ myApp.factory("kartService", function(bookService) {
 			var available_books = bookList_length-orderList.length;
 			var available_books = bookList_length-orderList.length;
 			var av = d3.select(".chart");
-			av.select("#available").transition().duration(3000).style("width",width(available_books)).text("Available = "+available_books);
-			d3.select(".chart").select("#inKart").transition().duration(3000).style("width",width(kart.length)).text("Kart = "+kart.length);
-			d3.select(".chart").select("#sold").transition().duration(3000).style("width",width(orderList.length)).text("Sold = "+orderList.length);
+			av.select("#available").text("Available = "+available_books).transition().duration(3000).style("width",width(available_books));
+			av.select("#inKart").text("Kart = "+kart.length).transition().duration(3000).style("width",width(kart.length));
+			av.select("#sold").text("Sold = "+orderList.length).transition().duration(3000).style("width",width(orderList.length));
 			console.log("available: "+available_books);
 		}
 	}
