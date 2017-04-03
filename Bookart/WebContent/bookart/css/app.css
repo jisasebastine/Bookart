@@ -41,7 +41,9 @@
 #bookListWrapper .book .book-details {
 	margin-left: 160px;
 }
-
+.container {
+	padding-top: 15px;
+}
 .container.ng-enter {
 	-webkit-transition:0.5s linear all;
 	 -moz-transition:0.5s linear all;

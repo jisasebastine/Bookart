@@ -6,12 +6,22 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
         
         <link rel="stylesheet" href="css/app.css">
-        <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.js"></script>
+        <script src="http://rawgit.com/YousefED/ElasticUI/master/examples/demo/lib/elasticsearch.angular.js"></script>
+	    <script src="http://rawgit.com/YousefED/ElasticUI/master/examples/demo/lib/elastic.js"></script>
+	    <script src="http://rawgit.com/YousefED/ElasticUI/master/dist/elasticui.min.js"></script>
         <script src="scripts/app.js"></script>
-        <script src="scripts/new.js"></script>
+        <script src="scripts/routes.js"></script>
+        <script src="scripts/bookService.js"></script>
+        <script src="scripts/kartService.js"></script>
+        <script src="scripts/books.js"></script>
+        <script src="scripts/header.js"></script>
+        <script src="scripts/visualize.js"></script>
+        <script src="scripts/kart.js"></script>
+        
     </head>
     <body>
         <div id="headerWrapper" ng-controller="HeaderCtrl">
@@ -22,6 +32,7 @@
                     <li ng-class="{active: nav.isActive('/books')}"><a href="#/books">Books</a></li>
                     <li ng-class="{active: nav.isActive('/kart')}"><a href="#/kart">Kart</a></li>
                     <li ng-class="{active: nav.isActive('/order')}"><a href="#/order">My Orders</a></li>
+                    <li ng-class="{active: nav.isActive('/visualize')}"><a href="#/visualize">Visualize</a></li>
                 </ul>
             </div>
         </div>
