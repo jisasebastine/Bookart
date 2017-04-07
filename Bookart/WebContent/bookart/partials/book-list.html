@@ -1,7 +1,7 @@
 <div id="bookListWrapper" eui-index="'details'">
 	<form role="form">
 	  <div class="form-group">
-	  <input type="text" class="form-control input-lg" placeholder="Search here..." eui-query="ejs.MatchQuery('details', querystring)" ng-model="querystring" eui-enabled="querystring.length" />
+	  <input type="text" class="form-control input-lg" placeholder="Search here..." eui-query="ejs.WildcardQuery('details', '*'+querystring+'*')" ng-model="querystring" eui-enabled="querystring.length" />
 		<!-- <input type="text" class="form-control input-lg" placeholder="Search here.." ng-model="searchStr"> -->
 	  </div>
 	</form>
