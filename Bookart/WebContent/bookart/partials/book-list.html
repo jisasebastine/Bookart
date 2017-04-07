@@ -1,24 +1,24 @@
-<div id="bookListWrapper">
+<div id="bookListWrapper" eui-index="'details'">
 	<form role="form">
 	  <div class="form-group">
-		<input type="text" class="form-control input-lg" placeholder="Search here.."
-			ng-model="searchStr">
+	  <input type="text" class="form-control input-lg" placeholder="Search here..." eui-query="ejs.MatchQuery('details', querystring)" ng-model="querystring" eui-enabled="querystring.length" />
+		<!-- <input type="text" class="form-control input-lg" placeholder="Search here.." ng-model="searchStr"> -->
 	  </div>
 	</form>
 	<ul class="list-unstyled">
-		<li class="book" ng-repeat="book in books| filter:searchStr"
-			style="background: white url('imgs/{{book.imgUrl}}') no-repeat">
+		<li class="book" ng-repeat="book in indexVM.results.hits.hits"
+			style="background: white url('imgs/{{book._source.imgUrl}}') no-repeat">
 			<div class="book-details clearfix">
-				<h3>{{book.name}}</h3>
-				<p>{{book.price | currency:'Rs.'}}</p>
+				<h3>{{book._source.name}}</h3>
+				<p>{{book._source.price | currency:'Rs.'}}</p>
 				<ul class="list-unstyled list-inline">
-					<li>Rating: {{book.rating}}</li>
-					<li>Binding: {{book.binding | uppercase}}</li>
-					<li>Publisher: {{book.publisher}}</li>
-					<li>Released: {{book.releaseDate}}</li>
+					<li>Rating: {{book._source.rating}}</li>
+					<li>Binding: {{book._source.binding | uppercase}}</li>
+					<li>Publisher: {{book._source.publisher}}</li>
+					<li>Released: {{book._source.releaseDate}}</li>
 				</ul>
-				<p>{{book.details}}</p>
-				<button class="btn btn-info pull-right" ng-click="addToKart(book)">{{book.Added}}</button>
+				<p>{{book._source.details}}</p>
+				<button class="btn btn-info pull-right" ng-click="addToKart(book._source)">{{book._source.Added}}</button>
 			</div>
 		</li>
 	</ul>
