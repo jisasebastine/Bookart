@@ -35,7 +35,6 @@ myApp.factory("kartService", function(bookService) {
 //			av.select("#available").text("Available = "+available_books).transition().duration(1500).style("width",width(available_books));
 			av.select("#inKart").text("Kart = "+kart.length).transition().duration(1500).style("width",width(kart.length));
 			av.select("#sold").text("Sold = "+orderList.length).transition().duration(1500).style("width",width(orderList.length));
-			console.log("available: "+available_books);
 		}
 	}
 });
