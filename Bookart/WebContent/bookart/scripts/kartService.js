@@ -1,4 +1,4 @@
-myApp.service("kartService", function(bookService) {
+myApp.factory("kartService", function(bookService) {
 	var kart = [];
 	var orderList = [];
 	var bookList_length = bookService.getBooks().length;
@@ -32,7 +32,7 @@ myApp.service("kartService", function(bookService) {
 			var available_books = bookList_length-orderList.length;
 			var available_books = bookList_length-orderList.length;
 			var av = d3.select(".chart");
-			av.select("#available").text("Available = "+available_books).transition().duration(1500).style("width",width(available_books));
+//			av.select("#available").text("Available = "+available_books).transition().duration(1500).style("width",width(available_books));
 			av.select("#inKart").text("Kart = "+kart.length).transition().duration(1500).style("width",width(kart.length));
 			av.select("#sold").text("Sold = "+orderList.length).transition().duration(1500).style("width",width(orderList.length));
 			console.log("available: "+available_books);

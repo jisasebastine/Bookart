@@ -17,10 +17,13 @@
         <script src="scripts/routes.js"></script>
         <script src="scripts/bookService.js"></script>
         <script src="scripts/kartService.js"></script>
+        <script src="scripts/fileModel.js"></script>
+        <!--script src="scripts/fileService.js"></script-->
         <script src="scripts/books.js"></script>
         <script src="scripts/header.js"></script>
         <script src="scripts/visualize.js"></script>
         <script src="scripts/kart.js"></script>
+        <script src="scripts/library.js"></script>
         
     </head>
     <body>
@@ -32,13 +35,14 @@
                     <li ng-class="{active: nav.isActive('/books')}"><a href="#/books">Books</a></li>
                     <li ng-class="{active: nav.isActive('/kart')}"><a href="#/kart">Kart</a></li>
                     <li ng-class="{active: nav.isActive('/order')}"><a href="#/order">My Orders</a></li>
+                    <li ng-class="{active: nav.isActive('/library')}"><a href="#/library">Library</a></li>
                     <li ng-class="{active: nav.isActive('/visualize')}"><a href="#/visualize">Visualize</a></li>
                 </ul>
             </div>
         </div>
         <div class="chart">
-			  <div style="background-color:green" id="available">
-			  </div>
+			  <!--div style="background-color:green" id="available">
+			  </div-->
 			  <div style="background-color:steelblue" id="inKart" >
 			  </div>
 			  <div style="background-color:red" id="sold" >

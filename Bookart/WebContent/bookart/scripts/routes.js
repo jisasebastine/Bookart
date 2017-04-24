@@ -22,6 +22,10 @@ angular.module('myApp')
 			templateUrl: "partials/visualize.html",
 			controller: "vizCtrl"
 		})
+		.when("/library", {
+			templateUrl: "partials/library.html",
+			controller: "LibCtrl"
+		})
 		.otherwise({
 			redirectTo: "/kart"
 	});

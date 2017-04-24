@@ -1,7 +1,7 @@
 <div id="bookListWrapper" eui-index="'details'">
 	<form role="form">
 	  <div class="form-group">
-	  <input type="text" class="form-control input-lg" placeholder="Search here..." eui-query="ejs.WildcardQuery('details', '*'+querystring+'*')" ng-model="querystring" eui-enabled="querystring.length" />
+	  <input type="text" class="form-control input-lg" placeholder="Search here..." eui-query="ejs.WildcardQuery('_all','*'+querystring+'*')" ng-model="querystring"  eui-highlight="ejs.Highlight('details').preTags('<mark>').postTags('</mark>')" eui-enabled="true" />
 		<!-- <input type="text" class="form-control input-lg" placeholder="Search here.." ng-model="searchStr"> -->
 	  </div>
 	</form>
@@ -17,8 +17,10 @@
 					<li>Publisher: {{book._source.publisher}}</li>
 					<li>Released: {{book._source.releaseDate}}</li>
 				</ul>
-				<p>{{book._source.details}}</p>
+				<p eui-highlight="ejs.Highlight(['details']).preTags('<mark>').postTags('</mark>')" eui-enabled="true">{{book._source.details}}</p>
 				<button class="btn btn-info pull-right" ng-click="addToKart(book._source)">{{book._source.Added}}</button>
+				<button ng-click="edit(book._id)" class="btn btn-info pull-left">Edit</a>
+				
 			</div>
 		</li>
 	</ul>

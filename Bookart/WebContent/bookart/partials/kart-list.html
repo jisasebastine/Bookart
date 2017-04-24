@@ -4,7 +4,7 @@
 		<li class="book" ng-repeat="book in kart"
 			style="background: white url('imgs/{{book.imgUrl}}') no-repeat">
 			<div class="book-details clearfix">
-				<h3>{{kart.indexOf(book)}} {{book.name}}</h3>
+				<h3>{{book.name}}</h3>
 				<p>{{book.price | currency:'Rs.'}}</p>
 				<ul class="list-unstyled list-inline">
 					<li>Rating: {{book.rating}}</li>
