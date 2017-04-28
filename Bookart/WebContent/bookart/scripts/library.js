@@ -1,12 +1,12 @@
 angular.module('myApp')
  .controller('LibCtrl', ['$scope','$http','bookService', function ($scope,$http,bookService) {
 	 $scope.book = bookService.select_book(); 
-	 console.log("Edited book: "+$scope.book.name);
+	 console.log("Selected book: "+$scope.book.name);
 	 $scope.cancel = function() {
 		 console.log("cancelled editing "+bookService.select_book().name);
-		 bookService.selected_book = {};
-//		 console.log("cancelled editing "+bookService.selected_book.name);
+		 bookService.empty_select();
 		 window.location = "/Bookart/bookart/index.html#/books";
+		 
 	 };
 	 $scope.send = function(book) {		 
 		 //index book
