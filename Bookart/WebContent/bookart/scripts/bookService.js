@@ -14,7 +14,7 @@ angular.module("myApp")
 			return selected_book;
 		},
 		empty_select: function() {
-			this.selected_book= {};
+			selected_book= {};
 		},
 		getBooks: function() {
 			return books;

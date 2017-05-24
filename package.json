@@ -1,0 +1,22 @@
+{
+  "name": "bookart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jisasebastine/Bookart.git"
+  },
+  "author": "jsebastine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jisasebastine/Bookart/issues"
+  },
+  "homepage": "https://github.com/jisasebastine/Bookart#readme",
+  "dependencies": {
+    "elasticsearch": "^13.0.1"
+  }
+}

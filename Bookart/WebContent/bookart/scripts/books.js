@@ -1,6 +1,7 @@
 angular.module('myApp')
  .controller("BookListCtrl",function($scope, bookService, kartService) {
 	bookService.selected_book = {};
+	console.log("in books.html : "+bookService.selected_book);
 	kartService.update($scope);
 	$scope.books = bookService.getBooks();
 	$scope.addToKart = function(book) {
